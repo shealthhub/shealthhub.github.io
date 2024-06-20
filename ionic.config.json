@@ -1,7 +1,0 @@
-{
-  "name": "shealthhub",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
