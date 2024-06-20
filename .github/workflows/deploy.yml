@@ -22,9 +22,9 @@ jobs:
         run: npm install
 
       - name: Build the Angular app
-        run: npm run build -- --base-href=https://shealthhub.github.io/ --no-silent
+        run: npm run build -- --base-href=https://shealthhub.github.io/
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=www
+        run: npx angular-cli-ghpages --dir=www --no-silent
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
