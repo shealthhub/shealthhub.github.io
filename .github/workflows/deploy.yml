@@ -25,6 +25,6 @@ jobs:
         run: npm run build -- --base-href=https://shealthhub.github.io/
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/my-angular-app
+        run: npx angular-cli-ghpages --dir=www
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
