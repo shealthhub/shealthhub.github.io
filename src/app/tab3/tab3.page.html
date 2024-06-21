@@ -1,11 +1,92 @@
-
+<ion-menu side="end"></ion-menu>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button> </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <img src="assets/icon/scania.svg" class="logo" height="40px" />
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="secondary">
+      Scania Health Hub
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-item-divider>
+    <ion-label>Podium</ion-label>
+  </ion-item-divider>
+
+  <ion-item lines="full">
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" src="assets/photos/felipe.jpg" />
+    </ion-avatar>
+    <ion-label>Felipe Bazano (FBACCA)</ion-label>
+    <ion-label name="medal" slot="end">300pts</ion-label>
+    <ion-icon name="medal" slot="end" class="gold"></ion-icon>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" src="assets/photos/lucas.jpg" />
+    </ion-avatar>
+    <ion-label>Lucas Garcia (LGA4XT)</ion-label>
+
+    <ion-label name="medal" slot="end">200pts</ion-label>
+    <ion-icon name="medal" slot="end" class="silver"></ion-icon>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" src="assets/photos/hugo.jpg" />
+    </ion-avatar>
+    <ion-label>Hugo Peres (SSBHPE)</ion-label>
+    <ion-label name="medal" slot="end">100pts</ion-label>
+    <ion-icon name="medal" slot="end" class="bronze"></ion-icon>
+  </ion-item>
+
+
+  <ion-item-divider>
+  </ion-item-divider>
+  <ion-item lines="full">
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+
+    <ion-label>Zezinho</ion-label>
+    <ion-label name="medal" slot="end">90pts</ion-label>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Luizinho</ion-label>
+    <ion-label name="medal" slot="end">80pts</ion-label>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Juquinha</ion-label>
+    <ion-label name="medal" slot="end">42pts</ion-label>
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-label position="floating">Por Area</ion-label>
+    <ion-grid>
+      <ion-row>
+
+      <ion-chip color="success">Success</ion-chip>
+      <ion-chip color="warning">Warning</ion-chip>
+      <ion-chip color="danger">Danger</ion-chip>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input></ion-input>
+  </ion-item> -->
+
+
 </ion-content>

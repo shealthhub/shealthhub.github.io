@@ -1,21 +1,87 @@
+<ion-menu side="end"></ion-menu>
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
+      <ion-menu-button> </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
       <img src="assets/icon/scania.svg" class="logo" height="40px" />
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title slot="secondary">
       Scania Health Hub
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1 eseses</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" id="container">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <swiper-container slidesPerView="1" speed="100" loop="true" [navigation]="true" pagination="true" centereSlides="true"
+    autoplay=true>
+
+    <swiper-slide>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="assets/images/sangue.jpg" width="100" />
+        <ion-card-header>
+          <ion-card-title>Junho Vermelho: ‘estender o braço’ pode salvar vidas.</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+
+    <swiper-slide>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="assets/images/virus.jpg" height="1000">
+        <ion-card-header>
+          <ion-card-title>Campanha de Vacinação 2024</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+
+    <swiper-slide>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="assets/images/tabaco.jpg" />
+        <ion-card-header>
+          <ion-card-title>Dia Mundial Sem Tabaco</ion-card-title>
+          <ion-card-subtitle>Lear Mais</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+
+
+
+  </swiper-container>
+
+  <ion-item-divider>
+  </ion-item-divider>
+
+
+  <ion-item lines="none">
+    <ion-text>Faça o Login para garantir acesso aos Check-Ins</ion-text>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button *ngIf="!logged" (click)="login()" color="primary">Login</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button *ngIf="logged">Check-In <ion-icon slot="end" name="qr-code"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button accept="image/*" type="file" *ngIf="logged" (click)="logout()" color="danger"
+          (click)="present()">Logout</ion-button>
+        <input accept="image/*" type="file" *ngIf="logged" (click)="logout()" color="danger" hidden="true">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-alert [isOpen]="alertOpened" trigger="present-alert" header="Bem Vindo ao Scania Health Hub!" subHeader=""
+    message="Esta é sua primeira vez acessando a este aplicativo, esperamos que tenha uma ótima experiência" [buttons]="buttons"  (didDismiss)="setOpen(false)"></ion-alert>
+
+
+
 </ion-content>

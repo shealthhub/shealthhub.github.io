@@ -1,16 +1,18 @@
-
+<ion-menu side="end"></ion-menu>
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
+      <ion-menu-button> </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
       <img src="assets/icon/scania.svg" class="logo" height="40px" />
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title slot="secondary">
       Scania Health Hub
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -19,36 +21,47 @@
     </ion-toolbar>
   </ion-header>
 
-   <ion-list [inset]="true">
+  <ion-card>
+    <img alt="Silhouette of mountains" src="assets/images/sangue.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>20 de Junho de 2024</ion-card-subtitle>
+      <ion-card-title>Junho Vermelho: ‘estender o braço’ pode salvar vidas.</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      A Scania realiza, pelo segundo ano consecutivo, a campanha Doe Sangue. Compartilhe Vida., movimento ...
+      <strong >Clique para continuar lendo</strong>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list [inset]="true">
     <ion-item [button]="true" detail="false">
       <div class="unread-indicator-wrapper" slot="start">
         <div class="unread-indicator"></div>
       </div>
       <ion-label>
-        <strong>Rick Astley</strong>
-        <ion-text>Never Gonna Give You Up</ion-text><br />
+        <strong>Dia Mundial Sem Tabaco:</strong>
         <ion-note color="medium" class="ion-text-wrap">
-          Never gonna give you up Never gonna let you down Never gonna run...
+           Uma data para conscientização e informação dos malefícios do cigarro à sua saúde
         </ion-note>
       </ion-label>
       <div class="metadata-end-wrapper" slot="end">
-        <ion-note color="medium">06:11</ion-note>
+        <ion-note color="medium">09:11</ion-note>
         <ion-icon color="medium" name="chevron-forward"></ion-icon>
       </div>
     </ion-item>
     <ion-item [button]="true" detail="false">
       <div class="unread-indicator-wrapper" slot="start"></div>
       <ion-label>
-        <strong>Ionitron</strong>
-        <ion-text>I have become sentient</ion-text><br />
-        <ion-note color="medium" class="ion-text-wrap">That is all.</ion-note>
+        <strong>Prevenção Coronavirus: </strong>
+        <ion-note color="medium" class="ion-text-wrap">Desde o início da pandemia do Coronavírus, o mundo não é mais o mesmo de ontem...</ion-note>
       </ion-label>
       <div class="metadata-end-wrapper" slot="end">
-        <ion-note color="medium">03:44</ion-note>
+        <ion-note color="medium">04:20</ion-note>
         <ion-icon color="medium" name="chevron-forward"></ion-icon>
       </div>
     </ion-item>
-    <ion-item [button]="true" detail="false">
+    <!-- <ion-item [button]="true" detail="false">
       <div class="unread-indicator-wrapper" slot="start">
         <div class="unread-indicator"></div>
       </div>
@@ -60,35 +73,14 @@
         </ion-note>
       </ion-label>
       <div class="metadata-end-wrapper" slot="end">
-        <ion-note color="medium">Yesterday</ion-note>
+        <ion-note color="medium">Ontem</ion-note>
         <ion-icon color="medium" name="chevron-forward"></ion-icon>
       </div>
-    </ion-item>
-    <ion-item [button]="true" detail="false">
-      <div class="unread-indicator-wrapper" slot="start"></div>
-      <ion-label>
-        <strong>Ionic</strong>
-        <ion-text>Announcing Ionic 7.0</ion-text><br />
-        <ion-note color="medium" class="ion-text-wrap">This version is one more than Ionic 6!</ion-note>
-      </ion-label>
-      <div class="metadata-end-wrapper" slot="end">
-        <ion-note color="medium">Yesterday</ion-note>
-        <ion-icon color="medium" name="chevron-forward"></ion-icon>
-      </div>
-    </ion-item>
+    </ion-item> -->
+
   </ion-list>
 
-<ion-card>
-  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-  <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-  </ion-card-header>
 
-  <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
-  </ion-card-content>
-</ion-card>
 
 
 </ion-content>
